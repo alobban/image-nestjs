@@ -31,7 +31,7 @@ export class AppController {
     };
     return response;
   }
-  @Get('user/:imgpath')
+  @Get(':imgpath')
   seeUploadedFile(@Param('imgpath') image, @Res() res) {
     return res.sendFile(image, { root: './files' });
   }
